@@ -153,6 +153,7 @@ article.sample-col-para img {
   display: flex;
   overflow: hidden;
   gap: 1rem;
+  border-radius: 1rem;
 }
 .marquee-wrapper .marquee-content {
   position: relative;
