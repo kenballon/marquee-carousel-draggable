@@ -1,9 +1,11 @@
 const parentMarquee = document.querySelector(".marquee-wrapper") as HTMLInputElement;
 const childMarquee = document.querySelector(".marquee-content") as HTMLInputElement;
-const adChildMarquee= (document.querySelector(".marquee-content") as HTMLInputElement).cloneNode(true);
 
+// will clone the child node of Parent Marquee or copy the sibling 
+const adChildMarquee= (document.querySelector(".marquee-content") as HTMLInputElement).cloneNode(true);
 parentMarquee.appendChild(adChildMarquee);
 
+// code below will allow a draggable feature for the marquee carousel 
 const ulParentListContainer = document.querySelector('.marquee-wrapper') as HTMLInputElement
 let isDragging = false;
 
@@ -12,12 +14,15 @@ const dragStart = (e: MouseEvent) => {
     ulParentListContainer.scrollLeft -= e.movementX    
 }
 
-
-
 const stopDragging = () => {
     isDragging = false;
 }
 
+// when mouse is pressed 
 ulParentListContainer.addEventListener('mousedown', () => isDragging = true)
+
+// when mouse is move to left
 ulParentListContainer.addEventListener('mousemove', dragStart)
+
+// when mouse pressed is released
 window.addEventListener('mouseup', stopDragging)
