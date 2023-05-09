@@ -180,8 +180,8 @@ article.sample-col-para img {
   border-radius: 0.5rem;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50% 15%;
-     object-position: 50% 15%;
+  -o-object-position: 50% 25%;
+     object-position: 50% 25%;
 }
 .marquee-wrapper .marquee-content .card-testimonial article h4 {
   font-size: 20px;
